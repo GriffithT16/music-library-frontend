@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import DisplaySongs from './Components/DisplaySongs/DisplaySongs';
 import AddNewSongForm from './Components/AddNewSongForm/AddNewSongForm';
+import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
   
@@ -10,7 +11,7 @@ function App() {
 
   function addNewSong(entry){
 
-    let tempSongs = [entry];
+    let tempSongs = [entry, songs];
     setSongs(tempSongs);
   }
 
@@ -21,14 +22,21 @@ function App() {
   const fetchSongs = async () => {
 
     let response = await axios.get("http://127.0.0.1:8000/api/songs/");
-    console.log(response.songs)
+    console.log(response.data)
     debugger;
-    setSongs(response.songs);
+    setSongs(response.data);
   }
   return (
     <div>
-      <DisplaySongs parentEntries={songs}/>
-      <AddNewSongForm addNewSong={addNewSong}/>
+      <div className='border-box'>
+        <DisplaySongs parentEntries={songs}/>
+      </div>
+      <div className='border-box'>
+        <AddNewSongForm addNewSong={addNewSong}/>
+      </div>
+      {/* <div>
+        <SearchBar />
+      </div>      */}
     </div>
   );
 }
