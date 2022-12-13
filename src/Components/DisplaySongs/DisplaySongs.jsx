@@ -13,7 +13,7 @@ const DisplaySongs = (props) => {
             </tr>
         </thead>        
         <tbody>            
-            {props.parentEntries.map((entry, index) => {
+            {props.songs.map((entry, index) => {
                 return (
                     <tr key={index}>
                         <td>{index + 1}</td>

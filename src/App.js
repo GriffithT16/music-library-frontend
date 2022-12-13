@@ -11,8 +11,8 @@ function App() {
 
   function addNewSong(entry){
 
-    let tempSongs = [entry, songs];
-    setSongs(tempSongs);
+    // let tempSongs = [entry, songs];
+    // setSongs(tempSongs);
   }
 
   useEffect(() => {
@@ -23,18 +23,23 @@ function App() {
 
     let response = await axios.get("http://127.0.0.1:8000/api/songs/");
     console.log(response.data)
-    debugger;
+    // debugger;
     setSongs(response.data);
   }
+
+  // function search(songSearched)
+  //   debugger;
+  //   console.log(songSearched)
+
   return (
     <div>
       <div className='border-box'>
-        <DisplaySongs parentEntries={songs}/>
-        <SearchBar />
+        <DisplaySongs songs={songs}/>        
       </div>
       <div className='border-box'>
         <AddNewSongForm addNewSong={addNewSong}/>
       </div>
+        <SearchBar songs={songs} setSongs={setSongs}/>
       <div>
         
       </div>     

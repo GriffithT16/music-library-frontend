@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 
 const AddNewSongForm = (props) => {
@@ -9,7 +10,7 @@ const AddNewSongForm = (props) => {
     const [release_date, setReleaseDate] = useState('');
     const [genre, setGenre] = useState('');
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
         let newSong = {
             title: title,
@@ -18,8 +19,12 @@ const AddNewSongForm = (props) => {
             release_date: release_date,
             genre: genre
         };
+        debugger;
         console.log(newSong)
-        props.addNewSong(newSong)
+        let response = await axios.post('http://127.0.0.1:8000/api/songs/', newSong);
+        if(response.status === 201){
+            return true;
+        }
     }
     return ( 
         <form onSubmit={handleSubmit}>
