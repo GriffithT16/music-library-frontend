@@ -30,13 +30,14 @@ function App() {
     <div>
       <div className='border-box'>
         <DisplaySongs parentEntries={songs}/>
+        <SearchBar />
       </div>
       <div className='border-box'>
         <AddNewSongForm addNewSong={addNewSong}/>
       </div>
-      {/* <div>
-        <SearchBar />
-      </div>      */}
+      <div>
+        
+      </div>     
     </div>
   );
 }
