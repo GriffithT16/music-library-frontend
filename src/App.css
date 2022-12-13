@@ -3,8 +3,34 @@
   flex-wrap: nowrap;
   border: 3.5px;
   border-style: solid;
-  border-color: lightgray;
+  border-color: white;
   margin: 1rem;
   padding: 1.5em;
-  background-color: lightslategray;
+  background-color: gray, transparent;
+  border-radius: 1rem;
+}
+.background-img{
+  background-image: url('../background.jpg');
+  background-repeat: no-repeat;
+  height:100vh;
+  background-position: center;
+  background-size: cover;
+}
+.border-box-nav {
+  display: flex;
+  border: 4px;
+  border-radius: 1rem;
+  background-color: transparent;
+  border-style: groove;
+  border-color: white;
+  font-size: 2em;
+  padding: 0em;
+  text-shadow: 3rem;
+  box-sizing: border-box;
+  width: 400px;
+}
+.small-box {
+  display: flex;
+  background-color: lightgray;
+  border-radius: .5rem;
 }

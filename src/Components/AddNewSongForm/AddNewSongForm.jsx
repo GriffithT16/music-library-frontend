@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import DisplaySongs from '../DisplaySongs/DisplaySongs';
 
 
 const AddNewSongForm = (props) => {
@@ -19,7 +20,7 @@ const AddNewSongForm = (props) => {
             release_date: release_date,
             genre: genre
         };
-        debugger;
+        // debugger;
         console.log(newSong)
         let response = await axios.post('http://127.0.0.1:8000/api/songs/', newSong);
         if(response.status === 201){

@@ -4,6 +4,8 @@ import axios from 'axios';
 import DisplaySongs from './Components/DisplaySongs/DisplaySongs';
 import AddNewSongForm from './Components/AddNewSongForm/AddNewSongForm';
 import SearchBar from './Components/SearchBar/SearchBar';
+import NavBar from './Components/NavBar/NavBar';
+
 
 function App() {
   
@@ -32,7 +34,8 @@ function App() {
   //   console.log(songSearched)
 
   return (
-    <div>
+    <div className='background-img'>
+      <NavBar />
       <div className='border-box'>
         <DisplaySongs songs={songs}/>        
       </div>

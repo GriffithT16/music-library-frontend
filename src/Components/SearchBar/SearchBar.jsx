@@ -10,7 +10,7 @@ const SearchBar = (props) => {
 
     let songFound;
     songFound = props.songs.filter(function (el) {
-      if (el.title.includes(songSearched) || el.genre.includes(songSearched) || el.album.includes(songSearched) || el.artist.includes(songSearched)) {
+      if (el.title.includes(songSearched) || el.release_date.includes(songSearched) || el.genre.includes(songSearched) || el.album.includes(songSearched) || el.artist.includes(songSearched)) {
         return true;
       }
     });
