@@ -3,7 +3,7 @@ const DisplaySongs = (props) => {
     return ( 
        <table className="table">
         <thead>
-            <tr>
+            <tr style={{color: "black"}}>
                 <th>Number</th>
                 <th>Title</th>
                 <th>Artist</th>
@@ -12,7 +12,7 @@ const DisplaySongs = (props) => {
                 <th>Genre</th>
             </tr>
         </thead>        
-        <tbody>            
+        <tbody style={{color: "black"}}>            
             {props.songs.map((entry, index) => {
                 return (
                     <tr key={index}>

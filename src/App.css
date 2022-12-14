@@ -10,7 +10,7 @@
   border-radius: 1rem;
 }
 .background-img{
-  background-image: url('../background.jpg');
+  background-image: url('../musicnote.jpg');
   background-repeat: no-repeat;
   height:100vh;
   background-position: center;
@@ -27,7 +27,7 @@
   padding: 0em;
   text-shadow: 3rem;
   box-sizing: border-box;
-  width: 400px;
+
 }
 .small-box {
   display: flex;
